@@ -1,6 +1,6 @@
 # squinterferometer
 
-**Build a snap-together squeezed light interferometer or other quantum-optics experiment**
+**Build a snap-together squeezed light interferometer or other quantum-optics experiments**
 
 Build an optical setup the way you'd sketch it on a whiteboard. Start with some input lasers or vacuum ports, then chain components one after another, adding squeezing, optical amplification, phase shifts, beam splitters, or loss.
 
@@ -8,7 +8,7 @@ The toolkit calculates output fields, photon numbers, homodyne measurements, noi
 
 Example interferometers
 - Mach–Zehnder interferometer
-- Squeezed light interferometer
+- squeezed light interferometer
 - boosted squeezed light interferometer, aka SU(1,1) interferometer
 - Mach–Zehnder interferometer with loss
 
@@ -26,8 +26,7 @@ from sympy import symbols, pi
 α = symbols('α', real=True)   # laser amplitude
 ϕ = symbols('ϕ', real=True)   # the phase you're measuring
 
-c = (Squint().input('a', α).input('b', 0)
-             .bs('a', 'b').phase('a', ϕ).bs('a', 'b'))
+c = Squint().input('a', α).input('b', 0).beamsplitter('a', 'b').phase('a', ϕ).beamsplitter('a', 'b')
 
 c.dphisqr(c.N('a'), ϕ, ϕ0=pi/2)   # exact phase sensitivity Δϕ²
 ```
