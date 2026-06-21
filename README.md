@@ -20,13 +20,13 @@ Example answers
 ## Example
 
 ```python
-from squinterferometer import Squint
+from squinter import Squinter
 from sympy import symbols, pi
 
 α = symbols('α', real=True)   # laser amplitude
 ϕ = symbols('ϕ', real=True)   # the phase you're measuring
 
-c = Squint().input('a', α).input('b', 0).beamsplitter('a', 'b').phase('a', ϕ).beamsplitter('a', 'b')
+c = Squinter().input('a', α).input('b', 0).beamsplitter('a', 'b').phase('a', ϕ).beamsplitter('a', 'b')
 
 c.dphisqr(c.N('a'), ϕ, ϕ0=pi/2)   # exact phase sensitivity Δϕ²
 ```
