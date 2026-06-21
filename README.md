@@ -1,4 +1,4 @@
-# squinterferometer
+# squinter
 
 **Build a snap-together squeezed light interferometer or other quantum-optics experiments**
 
