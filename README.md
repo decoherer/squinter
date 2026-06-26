@@ -1,10 +1,10 @@
 # squinter
 
-**Build a snap-together squeezed light interferometer or other quantum-optics experiments**
+**Build and model a squeezed light interferometer**
 
-Build an optical setup the way you'd sketch it on a whiteboard. Start with some input lasers or vacuum ports, then chain components one after another, adding squeezing, optical amplification, phase shifts, beam splitters, or loss.
+A toolkit for modeling conventional and squeezed-light interferometers and other Gaussian quantum-optics experiments. Build an optical setup the way you'd sketch it on a whiteboard. Start with input lasers or vacuum ports, then snap together a chain of components—squeezers, parametric amplifiers, phase shifters, beam splitters, and loss channels. Computations include the resulting output fields, photon numbers, homodyne measurements, noise, and phase sensitivity.
 
-The toolkit calculates output fields, photon numbers, homodyne measurements, noise, and phase sensitivity using exact symbolic expressions. Behind the scenes each component is represented as a matrix of creation and annihilation operators. The inputs use symbolic sympy variables and the results are given as sympy algebraic formulas. Substitute numbers for each variable to get a numerical answer.
+Behind the scenes each component is represented as a transfer matrix acting on the creation and annihilation operators in the Heisenberg picture. The inputs use symbolic sympy variables and the results are given as sympy algebraic formulas. Substitute numbers for each variable to get a numerical answer.
 
 Example interferometers
 - Mach–Zehnder interferometer
@@ -15,7 +15,7 @@ Example interferometers
 Example answers
 - how many photons land at each output port
 - what a homodyne detector would read at a given phase
-- how precisely can you measure a phase, i.e. the whole reason to use squeezing
+- how precisely can you measure the phase, i.e. the whole reason to use squeezing
 
 ## Example
 
